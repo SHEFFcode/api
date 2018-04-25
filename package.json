@@ -1,0 +1,48 @@
+{
+  "name": "doordash-jeremy-shefer",
+  "version": "1.0.0",
+  "description": "doordash take home",
+  "main": "svr.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha ./tests/*.test.js",
+    "test-watch": "nodemon --exec npm test",
+    "serve": "node svr.js",
+    "serve-dev": "node svr.js --dev",
+    "zip": "gulp zip"
+  },
+  "setts": {
+    "forceDev": false,
+    "timeout": "5s",
+    "cors": {
+      "origin": [
+        "http://localhost:3000",
+        "https://www.doordash.com/"
+      ]
+    }
+  },
+  "author": "Jeremy Shefer",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cluster": "^0.7.7",
+    "colors": "^1.2.1",
+    "connect-timeout": "^1.9.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "express-rate-limit": "^2.11.0",
+    "express-sanitize-escape": "^1.1.0",
+    "moment": "^2.22.1",
+    "moment-business-days": "^1.0.6",
+    "yahoo-finance": "^0.3.5",
+    "yargs": "^11.0.0"
+  },
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "chai": "^4.1.2",
+    "expect": "1.20.2",
+    "gulp": "^3.9.1",
+    "gulp-zip": "^4.1.0",
+    "mocha": "^5.1.1",
+    "supertest": "^3.0.0"
+  }
+}
